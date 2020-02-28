@@ -1,6 +1,6 @@
 {
-  "name": "vue-improve-loader",
-  "version": "0.1.1",
+  "name": "exclude-wx-dom-loader",
+  "version": "0.0.1",
   "description": "a tool for develop miniprogram with vue",
   "main": "src/index.js",
   "miniprogram": "src",
@@ -21,15 +21,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wechat-miniprogram/kbone.git"
+    "url": "https://github.com/wzs28150/exclude-wx-dom-loader.git"
   },
-  "author": "wechat-miniprogram",
+  "author": "wzs28150",
   "license": "MIT",
   "devDependencies": {
     "jest": "^24.8.0"
-  },
-  "gitHead": "7d14c443c12ed38c82eb79ded26795ed21db8db3",
-  "__npminstall_done": "Thu Feb 27 2020 23:13:05 GMT+0800 (GMT+08:00)",
-  "_from": "vue-improve-loader@0.1.1",
-  "_resolved": "https://registry.npm.taobao.org/vue-improve-loader/download/vue-improve-loader-0.1.1.tgz"
+  }
 }
