@@ -13,11 +13,6 @@ function generateHtml(node) {
             noCheckReduce = false
             return ''
         }
-
-        // 检查是否需要替换 tagname
-        if (attr.name === 'check-wx-replace-tagname') {
-            node.tagName = attr.value
-        }
     }
 
     const content = []

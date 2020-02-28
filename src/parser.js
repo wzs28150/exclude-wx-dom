@@ -10,15 +10,15 @@ const attrReg = /([-A-Za-z0-9_:@.]+)(?:\s*=\s*(?:(?:"((?:\\.|[^"])*)")|(?:'((?:\
 
 // 空元素 - https://www.w3.org/TR/html/syntax.html#void-elements
 const voidMap = {};
-['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'].forEach(n => voidMap[n] = true)
+[].forEach(n => voidMap[n] = true)
 
 // 块级元素 - https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements#Elements
 const blockMap = {};
-['address', 'article', 'aside', 'blockquote', 'canvas', 'dd', 'div', 'dl', 'dt', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'header', 'hgroup', 'hr', 'li', 'main', 'nav', 'noscript', 'ol', 'output', 'p', 'pre', 'section', 'table', 'tfoot', 'ul', 'video'].forEach(n => blockMap[n] = true)
+['wx-view', 'wx-video'].forEach(n => blockMap[n] = true)
 
 // 行内元素 - https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements#Elements
 const inlineMap = {};
-['a', 'abbr', 'acronym', 'b', 'bdo', 'big', 'br', 'button', 'cite', 'code', 'dfn', 'em', 'i', 'img', 'input', 'kbd', 'label', 'map', 'object', 'q', 'samp', 'script', 'select', 'small', 'span', 'strong', 'sub', 'sup', 'textarea', 'time', 'tt', 'var'].forEach(n => inlineMap[n] = true)
+[].forEach(n => inlineMap[n] = true)
 
 // 可能包含任意内容的元素 - https://www.w3.org/TR/html/syntax.html#raw-text
 const rawTextMap = {};
@@ -167,7 +167,7 @@ function parse(html) {
         children: [],
     }
     const stack = [r]
-
+    
     stack.last = function() {
         return this[this.length - 1]
     }
@@ -201,7 +201,6 @@ function parse(html) {
             })
         },
     })
-
     return r.children
 }
 
